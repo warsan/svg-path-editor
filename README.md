@@ -1,65 +1,65 @@
 # SvgPathEditor
-Edit or create SVG paths in browser: https://yqnn.github.io/svg-path-editor/
+Редактирование или создание SVG-путей в браузере: https://yqnn.github.io/svg-path-editor/
 [![Image of Yaktocat](./doc/screenshot.png)](https://yqnn.github.io/svg-path-editor/)
 
-## How to Use
+## Как использовать
 
-##### Basic:
-- Paste or edit the raw path in the **path** field
-- Click on **+** to add a new command to the path, select a type, then click on the destination
-- Move points with drag and drop
-- Click on a point, then on the **...** button to insert a command right after the selected one, to remove it, or to change its type
+##### Основа:
+- Вставьте или отредактируйте необработанный путь в поле **path** 
+- Нажмите **+**, чтобы добавить новую команду в путь, выберите тип, а затем нажмите на пункт назначения
+- Перемещение точек с помощью перетаскивания
+- Нажмите на точку, затем на кнопку ** ... **, чтобы вставить команду сразу после выбранного, чтобы удалить его или изменить его тип
 
-##### Commands panel:
-- Click on the command type to toggle between relative and absolute coordinates
-- Relative command types are **orange**, absolute are **purple**
-- Click on **...** then **Delete** to delete a command
-- Click on **...** then **Insert after** to insert a new command right after the selected one
-- Click on **...** then **Convert to** to convert the selected command to a new type
+##### Панель команд:
+- Нажмите на тип команды, чтобы переключиться между относительными и абсолютными координатами
+- Относительные типы команд - **оранжевые**, абсолютные - **фиолетовые**
+- Нажмите **...** потом **Удалить**, чтобы удалить команду
+- Нажмите **...** потом **Вставьте после**, чтобы вставить новую команду сразу после выбранного
+- Нажмите **...** потом **преобразуйте в**, чтобы преобразовать выбранную команду на новый тип
 
 ##### ViewBox:
-- Use mouse wheel, or click **Zoom in** and **Zoom out** to zoom in/out
-- Use drag & drop to move the viewBox
-- Click on **Zoom to Fit** to automatically set the viewBox depending on current path
-- ViewBox can also be set manually with the **x**, **y**, **width** and **height** fields
+- Используйте колесико мыши или нажмите **Увеличить** и **Уменьшить**, чтобы увеличить/уменьшить масштаб
+- Используйте drag & drop для перемещения окна просмотра
+- Нажмите кнопку **Zoom to Fit**, чтобы автоматически установить поле просмотра в зависимости от текущего пути
+- viewBox также можно установить вручную с помощью полей **x**, **y**, **width** и **height** 
 
-##### Path operations:
-- Scale the full path with the **Scale** button
-- Translate the full path with the **Translate** button
-- Round all coordinates of the current path with the **Round** button
-- Convert all commands to relative or absolute coordinates with **Convert to relative** or **Convert to absolute** button
+##### Операции пути:
+- Масштабируйте полный путь с помощью кнопки **Scale** 
+- Переведите полный путь с помощью кнопки **Translate** 
+- Округлите все координаты текущего пути с помощью кнопки **Round** 
+- Преобразуйте все команды в относительные или абсолютные координаты с помощью кнопки **Преобразовать в относительные** или **Преобразовать в абсолютные** 
 
-##### Shortcuts:
-- Press **m**, **l**, **v**, **h**, **c**, **s**, **q**, **t**, **a** or **z** to insert a command after the selected one
-- Press **shift** + **m**, **l**, **v**, **h**, **c**, **s**, **q**, **t**, **a** or **z** to convert selected command to a new type
-- Press **echap** to delete the command being created, or the undo the current dragging operation
-- Press **delete** or **backspace** to delete the selected command
-- Press **ctrl** + **z** or **cmd** + **z** to undo
-- Press **ctrl** + **shift** + **z** or **cmd** + **shift** + **z** to redo
-- Press **ctrl** while dragging to ignore `snap to grid` constraint
+##### Кратчайший путь:
+- Нажмите **m**, **l**, **v**, **h**, **c**, **s**, **q**, **t**, **a** или **z**, чтобы вставить команду после выбранной
+- Нажмите **shift** + **m**, **l**, **v**, **h**, **c**, **s**, **q**, **t**, **a** или **z**, чтобы преобразовать выбранную команду в новый тип
+- Нажмите **echap**, чтобы удалить созданную команду или отменить текущую операцию перетаскивания.
+- Нажмите **delete** или **backspace**, чтобы удалить выбранную команду
+- Нажмите **ctrl** + **z** или **cmd** + * * z**, чтобы отменить
+- Нажмите **ctrl** + **shift** + * * z** или **cmd** + **shift** + * * z** , чтобы повторить
+- Нажмите **ctrl** при перетаскивании, чтобы игнорировать ограничение "привязка к сетке".
 
-## Running Locally
+## Запуск Локально
 
 ### Docker
 Run `docker build -t svg-path-editor . && docker run -p 4200:4200 svg-path-editor` or `docker-compose up`.
 
 ### Manually
 
-##### Requirements
-- [Node.js](https://nodejs.org/) v12.0 or higher
+##### Требования
+- [Node.js](https://nodejs.org/) v12.0 или выше
 
-##### Dependencies
-Run `npm install` to retrieve all the depencies of the project.
+##### Зависимости
+Запустите `npm install`, чтобы получить все депрессии проекта.
 
-##### Development server
-Run `npx ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+##### Сервер разработки
+Запустите `npx ng serve` для dev-сервера. Перейдите к `http://localhost:4200/`. Приложение автоматически перезагрузится, если вы измените какой-либо из исходных файлов.
 
-##### Build
-Run `npx ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
+##### Строить
+Запустите `npx ng build`, чтобы построить проект. Артефакты сборки будут храниться в каталоге `dist/`. Используйте флаг `--prod` для производственной сборки.
 
-##### Running unit tests
-Run `npx ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+##### Запуск модульных тестов
+Запустите `npx ng test`, чтобы выполнить модульные тесты через [Karma](https://karma-runner.github.io).
 
 ---
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.3.
+Этот проект был создан с помощью [Angular CLI](https://github.com/angular/angular-cli) версия 9.1.3.
