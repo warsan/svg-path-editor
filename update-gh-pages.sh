@@ -10,7 +10,7 @@ git checkout gh-pages
 rm -rf *.ico *.html *.js *.css *.txt assets
 mv dist/svg-path-editor/* .
 git add --all
-git commit -m "Refreshed gh-pages from master"
+git commit -m "Обновленные gh-pages от мастера"
 git show --stat
 
 read -p "Confirm publication? [yn] " -r
