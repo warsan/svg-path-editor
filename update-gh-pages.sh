@@ -2,7 +2,7 @@
 
 set -e
 
-git clone "https://github.com/warsan/svg-path-editor.git" .svg-path-editor-master
+git clone "https://github.com/Yqnn/svg-path-editor.git" .svg-path-editor-master
 cd .svg-path-editor-master
 npm install
 npm run build -- --prod
@@ -10,7 +10,7 @@ git checkout gh-pages
 rm -rf *.ico *.html *.js *.css *.txt assets
 mv dist/svg-path-editor/* .
 git add --all
-git commit -m "Обновленные gh-pages от мастера"
+git commit -m "Обновленные gh-страницы от мастера"
 git show --stat
 
 read -p "Confirm publication? [yn] " -r
