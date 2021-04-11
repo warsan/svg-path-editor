@@ -2,7 +2,7 @@
 
 set -e
 
-git clone "https://github.com/Yqnn/svg-path-editor.git" .svg-path-editor-master
+git clone "https://github.com/warsan/svg-path-editor.git" .svg-path-editor-master
 cd .svg-path-editor-master
 npm install
 npm run build -- --prod
@@ -13,7 +13,7 @@ git add --all
 git commit -m "Обновленные gh-страницы от мастера"
 git show --stat
 
-read -p "Confirm publication? [yn] " -r
+read -p "Подтвердить публикацию? [yn] " -r
 if [[ $REPLY =~ ^[Yy]$ ]]
 then
     echo
