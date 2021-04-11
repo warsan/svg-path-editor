@@ -9,7 +9,7 @@
             <app-expandable panelTitle="Path" [panelInfo]="rawPath.length" [opened]="true">
                 <div class="row">
                     <div class="input-block" style="flex-grow:1"> 
-                        <label class="opaque">Path</label>
+                        <label class="opaque">Путь</label>
                         <textarea
                             [ngModel]="rawPath"
                             (ngModelChange)="reloadPath($event, true)"
