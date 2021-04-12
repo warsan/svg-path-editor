@@ -41,9 +41,9 @@
 ## Запуск Локально
 
 ### Docker
-Run `docker build -t svg-path-editor . && docker run -p 4200:4200 svg-path-editor` or `docker-compose up`.
+Запустить `docker build -t svg-path-editor . && docker run -p 4200:4200 svg-path-editor` или `docker-compose up`.
 
-### Manually
+### Вручную
 
 ##### Требования
 - [Node.js](https://nodejs.org/) v12.0 или выше
